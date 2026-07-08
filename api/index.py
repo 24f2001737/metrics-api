@@ -10,7 +10,7 @@ ALLOWED_ORIGIN = "https://dash-eo4q5n.example.com"
 
 app = FastAPI()
 
-app.add_middleware(CORSMiddleware, allow_origins=[ALLOWED_ORIGIN], allow_credentials=False, allow_methods=["*"], allow_headers=["*"],)
+app.add_middleware(CORSMiddleware, allow_origins=[ALLOWED_ORIGIN], allow_credentials=False, allow_methods=["GET"], allow_headers=["*"],)
 
 class HeaderMiddleware(BaseHTTPMiddleware):
   async def dispatch(self, request, call_next):
